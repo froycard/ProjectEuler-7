@@ -1,0 +1,18 @@
+def IsPrime(i):
+    
+  if i <= 1: return false;  # Cope with negative, 0, and 1.
+
+  for j in range(2,i//2+1):
+    if i%j==0: return False;
+         
+  return True;
+
+n=1
+prime=0
+while prime!=10001:
+    n+=1
+    
+    if IsPrime(n):
+        prime+=1
+
+print("The prime 10001th is ", n) z
