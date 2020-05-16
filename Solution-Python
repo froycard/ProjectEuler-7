@@ -1,11 +1,20 @@
-def IsPrime(i):
-    
-  if i <= 1: return false  # Cope with negative, 0, and 1.
+from math import sqrt
 
-  for j in range(2,i//2+1):
-    if i%j==0: return False
-         
-  return True
+def IsPrime(n):
+    if (n <= 1):
+        return False
+    if (n == 2):
+        return True
+    if (n % 2 == 0):
+        return False
+
+    i = 3
+    while i <= sqrt(n):
+        if n % i == 0:
+            return False
+        i = i + 2
+
+    return True
 
 n=1
 prime=0
