@@ -1,11 +1,12 @@
 #include<iostream>
+#include<cmath>
 using namespace std; 
   
-bool IsPrime(int i) {
-  if (i <= 1) return false;
-
-  for (int j=2; j<=i/2; j++) {
-    if (i%j==0) {
+bool IsPrime(unsigned n) {
+  if (n <= 1) return false;
+  if (n % 2 == 0) return false;
+  for (auto j=3; j<=sqrt(n); j++) {
+    if (n%j==0) {
       return false;
     }
   }      
